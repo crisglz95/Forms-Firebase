@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { RxwebValidators, NumericValueType } from '@rxweb/reactive-form-validators';
 import { MessageErrorsService } from '../../services/message-errors.service';
 import { CountryService } from '../../services/country.service';
+import { UserDatabaseService } from '../../services/user-database.service';
 
 @Component({
   selector: 'app-formulario',
@@ -15,7 +16,7 @@ export class FormularioComponent implements OnInit {
   public countriesName: Array<string> = [];
 
 
-  constructor(private msgError: MessageErrorsService, private countryService: CountryService) { 
+  constructor(private msgError: MessageErrorsService, private countryService: CountryService, private UserBD: UserDatabaseService) { 
     this.countryService.GetCountry().subscribe(
       (country) => this.countriesName.push(country)
     );
@@ -81,6 +82,10 @@ export class FormularioComponent implements OnInit {
     return this.msgError.messageError(
       this.formulario.controls[control].errors
     )
+  }
+
+  public SaveUser(){
+    this.UserBD.GuardarUsuario();
   }
 
 }

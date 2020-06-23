@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "clienteregistro-25abf": {
+      "hosting": {
+        "FormFirebase": [
+          "clienteregistro-25abf"
+        ]
+      }
+    }
+  }
+}

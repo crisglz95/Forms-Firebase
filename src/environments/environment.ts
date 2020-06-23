@@ -5,13 +5,7 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    //Aqui va el API Key,
-    authDomain: "clienteregistro-25abf.firebaseapp.com",
-    databaseURL: "https://clienteregistro-25abf.firebaseio.com",
-    projectId: "clienteregistro-25abf",
-    storageBucket: "clienteregistro-25abf.appspot.com",
-    messagingSenderId: "121689492604",
-    appId: "1:121689492604:web:5528fc7c3aca1982164df9"
+    //Aqui va la info
   }
 };
 
